@@ -1,4 +1,5 @@
 import { whiteColor, blackColor, grayColor, hexToRgb } from 'assets/jss/stayTruePack'
+import fontSpectral from '../../fonts/SpectralSC-Regular.ttf'
 
 const tooltipsStyle = {
   tooltip: {
@@ -19,7 +20,7 @@ const tooltipsStyle = {
       ', 0.2)',
     maxWidth: '200px',
     textAlign: 'center',
-    fontFamily: '"Helvetica Neue",Helvetica,Arial,sans-serif',
+    fontFamily: `${fontSpectral}, "Helvetica", "Arial", sans-serif`,
     fontSize: '0.875em',
     fontStyle: 'normal',
     fontWeight: '400',
@@ -32,6 +33,6 @@ const tooltipsStyle = {
     whiteSpace: 'normal',
     lineBreak: 'auto',
   },
-};
+}
 
 export default tooltipsStyle;

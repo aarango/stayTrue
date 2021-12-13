@@ -6,6 +6,8 @@
 // // // Example: input = #999 => output = 153, 153, 153
 // // // Example: input = 999 => output = 153, 153, 153
 // #############################
+import fontSpectral from '../fonts/SpectralSC-Regular.ttf'
+
 const hexToRgb = (input) => {
   input = input + '';
   input = input.replace('#', '');
@@ -37,6 +39,7 @@ const hexToRgb = (input) => {
 // #############################
 
 const drawerWidth = 260;
+
 
 const primaryColor = [
   '#9c27b0',
@@ -169,10 +172,10 @@ const card = {
 };
 
 const defaultFont = {
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  fontFamily: `${fontSpectral}, "Helvetica", "Arial", sans-serif`,
   fontWeight: '300',
   lineHeight: '1.5em',
-};
+}
 
 const boxShadow = {
   boxShadow:
@@ -315,8 +318,8 @@ const title = {
   marginTop: '30px',
   marginBottom: '25px',
   minHeight: '32px',
-  fontFamily: '"Roboto Slab", "Times New Roman", serif',
-};
+  fontFamily: `${fontSpectral}, "Helvetica", "Arial", sans-serif`,
+}
 
 const cardTitle = {
   '&, & a': {

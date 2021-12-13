@@ -18,14 +18,16 @@ const useStyles = makeStyles(overviewStyle)
 export default function SectionPackages({ ...rest }) {
   const classes = useStyles()
   return (
-    <div className='cd-section' {...rest} style={{ background: '#F5E3CB' }}>
+    <div className="cd-section" {...rest} style={{ background: '#F5E3CB' }}>
       <div className={classes.container}>
-        <h2 style={{ color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
-          <strong>SURF PACKAGE´S</strong>
-        </h2>
         <GridContainer>
+          <GridItem md={12} sm={12} xs={12}>
+            <h2 style={{ color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
+              <strong>SURF PACKAGE´S</strong>
+            </h2>
+          </GridItem>
           <GridItem md={4} sm={4} xs={12}>
-            <Card pricing color='white' style={{ width: '20rem' }}>
+            <Card pricing color="white" style={{ width: '20rem' }}>
               <CardBody pricing>
                 <p className={classes.cardTitle}>Package 1</p>
                 <div className={`${classes.iconWrapper} ${classes.iconWrapperColor}`}>
@@ -37,9 +39,9 @@ export default function SectionPackages({ ...rest }) {
                 <p className={classes.cardDescriptionWhite}>Days: 3 Days</p>
                 <Button
                   round
-                  color='linkedin'
-                  component='a'
-                  href='mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 1!'
+                  color="linkedin"
+                  component="a"
+                  href="mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 1!"
                 >
                   Choose package
                 </Button>
@@ -47,7 +49,7 @@ export default function SectionPackages({ ...rest }) {
             </Card>
           </GridItem>
           <GridItem md={4} sm={4}>
-            <Card pricing color='white' style={{ width: '20rem' }}>
+            <Card pricing color="white" style={{ width: '20rem' }}>
               <CardBody pricing>
                 <p className={classes.cardTitle}>Package 2</p>
                 <div className={`${classes.iconWrapper} ${classes.iconWrapperColor}`}>
@@ -61,9 +63,9 @@ export default function SectionPackages({ ...rest }) {
                 <p className={classes.cardDescriptionWhite}>Days: 3 Days</p>
                 <Button
                   round
-                  color='linkedin'
-                  component='a'
-                  href='mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 2!'
+                  color="linkedin"
+                  component="a"
+                  href="mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 2!"
                 >
                   Choose package
                 </Button>
@@ -71,7 +73,7 @@ export default function SectionPackages({ ...rest }) {
             </Card>
           </GridItem>
           <GridItem md={4} sm={4}>
-            <Card pricing color='white' style={{ width: '20rem' }}>
+            <Card pricing color="white" style={{ width: '20rem' }}>
               <CardBody pricing>
                 <p className={classes.cardTitle}>Package 3</p>
                 <div className={`${classes.iconWrapper} ${classes.iconWrapperColor}`}>
@@ -85,9 +87,9 @@ export default function SectionPackages({ ...rest }) {
                 <p className={classes.cardDescriptionWhite}>Days: 3 Days</p>
                 <Button
                   round
-                  color='linkedin'
-                  component='a'
-                  href='mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 3!'
+                  color="linkedin"
+                  component="a"
+                  href="mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 3!"
                 >
                   Choose package
                 </Button>
@@ -95,7 +97,7 @@ export default function SectionPackages({ ...rest }) {
             </Card>
           </GridItem>
           <GridItem md={4} sm={4}>
-            <Card pricing color='white' style={{ width: '20rem' }}>
+            <Card pricing color="white" style={{ width: '20rem' }}>
               <CardBody pricing>
                 <p className={classes.cardTitle}>Package 4</p>
                 <div className={`${classes.iconWrapper} ${classes.iconWrapperColor}`}>
@@ -109,9 +111,9 @@ export default function SectionPackages({ ...rest }) {
                 <p className={classes.cardDescriptionWhite}>Days: 3 Days</p>
                 <Button
                   round
-                  color='linkedin'
-                  component='a'
-                  href='mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 4!'
+                  color="linkedin"
+                  component="a"
+                  href="mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 4!"
                 >
                   Choose package
                 </Button>
@@ -119,7 +121,7 @@ export default function SectionPackages({ ...rest }) {
             </Card>
           </GridItem>
           <GridItem md={4} sm={4}>
-            <Card pricing color='white' style={{ width: '20rem' }}>
+            <Card pricing color="white" style={{ width: '20rem' }}>
               <CardBody pricing>
                 <p className={classes.cardTitle}>Package 5</p>
                 <div className={`${classes.iconWrapper} ${classes.iconWrapperColor}`}>
@@ -133,9 +135,9 @@ export default function SectionPackages({ ...rest }) {
                 <p className={classes.cardDescriptionWhite}>Days: 3 Days</p>
                 <Button
                   round
-                  color='linkedin'
-                  component='a'
-                  href='mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 5!'
+                  color="linkedin"
+                  component="a"
+                  href="mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 5!"
                 >
                   Choose package
                 </Button>
@@ -143,7 +145,7 @@ export default function SectionPackages({ ...rest }) {
             </Card>
           </GridItem>
           <GridItem md={4} sm={4}>
-            <Card pricing color='white' style={{ width: '20rem' }}>
+            <Card pricing color="white" style={{ width: '20rem' }}>
               <CardBody pricing>
                 <p className={classes.cardTitle}>Package 6</p>
                 <div className={`${classes.iconWrapper} ${classes.iconWrapperColor}`}>
@@ -155,9 +157,9 @@ export default function SectionPackages({ ...rest }) {
                 <p className={classes.cardDescriptionWhite}>Days: 3 Days</p>
                 <Button
                   round
-                  color='linkedin'
-                  component='a'
-                  href='mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 6!'
+                  color="linkedin"
+                  component="a"
+                  href="mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 6!"
                 >
                   Choose package
                 </Button>

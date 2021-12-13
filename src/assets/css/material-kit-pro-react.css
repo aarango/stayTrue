@@ -1419,8 +1419,7 @@ td.rdtYear:hover {
     padding-top: 20px;
     color: #ffffff;
     text-align: center;
-    z-index: 3;
-    display: none; }
+    z-index: 3; }
   .slick-slider .slick-slide > div:first-child {
     position: relative; }
   .slick-slider .slick-icons {

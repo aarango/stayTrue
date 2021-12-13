@@ -76,7 +76,7 @@ const style = {
     display: "block",
   },
   footerBrand: {
-    height: "50px",
+    height: "90px",
     padding: "15px 15px",
     fontSize: "18px",
     lineHeight: "50px",

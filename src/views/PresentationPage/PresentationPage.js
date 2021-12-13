@@ -6,12 +6,14 @@ import classNames from 'classnames'
 import { makeStyles } from '@material-ui/core/styles'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
+
 // core components
 import Header from 'components/Header/Header.js'
 import HeaderLinks from 'components/Header/HeaderLinks.js'
 import Parallax from 'components/Parallax/Parallax.js'
 import Footer from 'components/Footer/Footer.js'
 import Button from 'components/CustomButtons/Button.js'
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
 
 // sections for this page
 import SectionIntroduction from './Sections/SectionIntroduction'
@@ -20,13 +22,21 @@ import SectioncCurses from './Sections/SectionCurses'
 import SectionDescription from 'views/PresentationPage/Sections/SectionDescription.js'
 import SectionsSpots from './Sections/SectionsSpots'
 import Logo from 'assets/img/logo.png'
+import LogoFooter from 'assets/img/logoFooter.png'
 import presentationStyle from 'assets/jss/material-kit-pro-react/views/presentationStyle.js'
 import SectionTeams from './Sections/SectionTeams'
 import SectionPackages from './Sections/SectionPackages'
 import SectionActivitis from './Sections/SectionActivitis'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 
-const useStyles = makeStyles(presentationStyle)
+const useStyles = makeStyles(theme => ({
+  ...presentationStyle,
+  root: {
+    [theme.breakpoints.between('sm', 'md')]: {
+      left: '0px',
+    },
+  },
+}))
 
 const updateView = () => {
   var contentSections = document.getElementsByClassName('cd-section')
@@ -45,7 +55,7 @@ const updateView = () => {
   }
 }
 
-export default function PresentationPage() {
+export default function PresentationPage(props) {
   React.useEffect(() => {
     var href = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
     if (window.location.href.lastIndexOf('#') > 0) {
@@ -97,9 +107,9 @@ export default function PresentationPage() {
   const imageStyleFooter = {
     position: 'relative',
     verticalAlign: 'left',
-    width: '30%',
+    //width: '30%',
     height: '100%',
-    zIndex: '100',
+    //zIndex: '100',
   }
 
   const cardStyle = {
@@ -254,17 +264,10 @@ export default function PresentationPage() {
         theme="white"
         content={
           <>
-            <div className={classes.left}>
-              <ListItem
-                className={classes.inlineBlock}
-                button
-                id="contact"
-                href="mailto:staytrue.surf@gmail.com"
-                target="_blank"
-                //onClick={(e => e.preventDefault(), smoothScroll('home'))}
-              >
-                <ListItemIcon className={classes.footerBrand}>Stay True Company</ListItemIcon>
-              </ListItem>
+            <div>
+              <div className={classes.root}>
+                <img width="100px" heigth="100px" style={imageStyleFooter} src={LogoFooter} />
+              </div>
             </div>
             <div className={classes.pullCenter}>
               <List>

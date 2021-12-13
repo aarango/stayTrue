@@ -9,6 +9,11 @@ body {
   font-size: 1rem;
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url('../../fonts/SpectralSC-Regular.ttf');
+}
+
 body,
 h1,
 h2,
@@ -29,7 +34,9 @@ h6 {
   color: inherit;
 }
 h1,
-h2,
+h2 {
+  font-family: myFirstFont, Courier, monospace;
+}
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;

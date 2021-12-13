@@ -1,4 +1,5 @@
 import { whiteColor, blackColor, grayColor, hexToRgb } from 'assets/jss/stayTruePack'
+import fontSpectral from '../fonts/SpectralSC-Regular.ttf'
 
 const popoverStyles = {
   popover: {
@@ -17,7 +18,7 @@ const popoverStyles = {
     borderRadius: '3px',
     display: 'block',
     maxWidth: '276px',
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: `${fontSpectral}, "Helvetica", "Arial", sans-serif`,
     fontStyle: 'normal',
     fontWeight: '400',
     textAlign: 'start',
@@ -49,6 +50,6 @@ const popoverStyles = {
     lineHeight: '1.4',
     color: whiteColor,
   },
-};
+}
 
 export default popoverStyles;
