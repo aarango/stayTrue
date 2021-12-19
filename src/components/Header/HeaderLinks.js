@@ -61,22 +61,22 @@ export default function HeaderLinks(props) {
     >
       <ListItem className={classes.listItem}>
         <Link to="/sections#curses" className={classes.dropdownLink} onClick={e => smoothScroll(e, 'curses')}>
-          Surf courses
+          <strong>Surf courses</strong>
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Link to="/sections#packages" className={classes.dropdownLink} onClick={e => smoothScroll(e, 'packages')}>
-          Surf packages
+          <strong> Surf packages</strong>
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Link to="/sections#activities" className={classes.dropdownLink} onClick={e => smoothScroll(e, 'activities')}>
-          Activities
+          <strong>Activities</strong>
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/sections#contact" className={classes.dropdownLink} onClick={e => smoothScroll(e, 'contact')}>
-          Contact us
+        <Link to="/sections#contactus" className={classes.dropdownLink} onClick={e => smoothScroll(e, 'contactus')}>
+          <strong>Contact us</strong>
         </Link>
       </ListItem>
     </List>

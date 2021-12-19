@@ -111,12 +111,12 @@ legend {
 }
 
 a {
-  color: $link-color;
+  color: #0976b4;
   text-decoration: none;
   background-color: transparent;
   &:hover,
   &:focus {
-    color: darken($link-color, 5%);
+    color: #0976b4;
     text-decoration: none;
   }
 }
@@ -207,7 +207,7 @@ dl {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background-color: #995581;
+  background-color: #125688;
   -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
   -moz-transition: -moz-transform 0.2s, background-color 0.5s;
   transition: transform 0.2s, background-color 0.5s;

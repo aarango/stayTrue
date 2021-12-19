@@ -12,10 +12,10 @@ const useStyles = makeStyles(descriptionStyle)
 export default function SectionDescription({ ...rest }) {
   const classes = useStyles()
   return (
-    <div className='cd-section' {...rest} style={{ background: '#F5E3CB' }}>
+    <div className="cd-section" {...rest} style={{ background: 'rgb(245 227 203 / 58%)' }}>
       <div className={classes.section}>
         <div className={classes.container}>
-          <GridContainer justify='center'>
+          <GridContainer justify="center">
             <GridItem md={7} sm={7}>
               <h2
                 style={{ textAlign: 'center', fontSize: '1.5rem', color: 'rgb(94 110 126)' }}

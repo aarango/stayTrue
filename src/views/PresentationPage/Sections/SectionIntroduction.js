@@ -15,9 +15,9 @@ const useStyles = makeStyles(componentsStyle)
 export default function SectionIntroduction({ ...rest }) {
   const classes = useStyles()
   return (
-    <div className='cd-section' {...rest} style={{ background: '#F5E3CB' }}>
+    <div className="cd-section" {...rest} style={{ background: 'rgb(245 227 203 / 58%)' }}>
       <div className={classes.container}>
-        <GridContainer justify='center'>
+        <GridContainer justify="center">
           <GridItem md={5} lg={5} sm={11} xs={11}>
             <p className={classes.sectionDark}>
               <b style={{ fontSize: '1rem' }}>Stay True is a Surf Company </b>located in Santa Teresa, Costa Rica just a
@@ -35,7 +35,7 @@ export default function SectionIntroduction({ ...rest }) {
           <GridItem xs={12} sm={6} md={6} xs={12} sm={12} md={7} lg={7}>
             <CardHeader image plain>
               <a>
-                <img src={group} alt='level1' />
+                <img src={group} alt="level1" />
               </a>
               <div
                 className={classes.coloredShadow}

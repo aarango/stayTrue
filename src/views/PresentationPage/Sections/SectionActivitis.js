@@ -6,7 +6,9 @@ import GridContainer from 'components/Grid/GridContainer.js'
 import GridItem from 'components/Grid/GridItem.js'
 import Card from 'components/Card/Card.js'
 import Carousel from 'react-slick'
-
+import ImageList from '@material-ui/core/ImageList'
+import ImageListItem from '@material-ui/core/ImageListItem'
+import ImageListItemBar from '@material-ui/core/ImageListItemBar'
 import carouselStyle from 'assets/jss/material-kit-pro-react/views/componentsSections/carouselStyle.js'
 import Atv from 'assets/img/atv.jpg'
 import Apnea from 'assets/img/image00001.jpeg'
@@ -74,7 +76,7 @@ export default function SectionActivitis({ ...rest }) {
     ],
   }
   return (
-    <div className="cd-section" id="carousel" {...rest} style={{ background: '#F5E3CB' }}>
+    <div className="cd-section" id="carousel" {...rest} style={{ background: 'rgb(245 227 203 / 58%)' }}>
       <div className={classes.container}>
         <GridContainer>
           <GridItem md={12} sm={12} xs={12}>
@@ -87,13 +89,23 @@ export default function SectionActivitis({ ...rest }) {
               <GridItem xs={12} md={12} sm={12}>
                 <Card style={cardStyle}>
                   <img src={Atv} alt="First slide" style={imageStyle} />
-                  <div className="slick-caption">
+                  <ImageListItemBar
+                    title="ATV"
+                    subtitle={
+                      <span>
+                        {' '}
+                        All Terrain Vehicles (ATVs), also called “quads,” are the preferred method of transport and the
+                        best for exploring the area. We recommended renting one during your visit.
+                      </span>
+                    }
+                  />
+                  {/* <div className="slick-caption">
                     <h4>ATV</h4>
                     <p className={classes.sectionDark}>
                       All Terrain Vehicles (ATVs), also called “quads,” are the preferred method of transport and the
                       best for exploring the area. We recommended renting one during your visit.
                     </p>
-                  </div>
+                  </div> */}
                 </Card>
               </GridItem>
               <GridItem xs={12} md={12} sm={12}>
@@ -189,9 +201,11 @@ export default function SectionActivitis({ ...rest }) {
                   <div className="slick-caption">
                     <h4>STAND-UP PADDLE BOARDING</h4>
                     <p className={classes.sectionDark}>
-                      The Montezuma waterfall consists of three cascading falls along a river in the bohemian beach town
-                      of Montezuma. Is one of the biggest attractions of the area where you can swim, refresh and jump
-                      into the water!
+                      <strong>
+                        The Montezuma waterfall consists of three cascading falls along a river in the bohemian beach
+                        town of Montezuma. Is one of the biggest attractions of the area where you can swim, refresh and
+                        jump into the water!
+                      </strong>
                     </p>
                   </div>
                 </Card>

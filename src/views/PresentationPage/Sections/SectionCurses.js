@@ -1,23 +1,27 @@
 import React from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
+
 // @material-ui/icons
 import GridContainer from 'components/Grid/GridContainer.js'
 import GridItem from 'components/Grid/GridItem.js'
 import Card from 'components/Card/Card.js'
 import CardHeader from 'components/Card/CardHeader.js'
 import blogsStyle from 'assets/jss/material-kit-pro-react/views/sectionsSections/blogsStyle.js'
+import ShowMoreText from 'react-show-more-text'
 
-import level1 from 'assets/img/DSC_0839.jpg'
+import level1 from 'assets/img/activity1.jpeg'
 import level2 from 'assets/img/DSC_0650.jpg'
 import level3 from 'assets/img/_DSC1455.jpg'
 
 const useStyles = makeStyles(blogsStyle)
 
-export default function SectionCurses({ ...rest }) {
+function SectionCurses({ ...rest }) {
+
   const classes = useStyles()
   return (
-    <div style={{ marginBottom: 0 }} className='cd-section' {...rest}>
+    <div style={{ marginBottom: 0 }} className="cd-section" {...rest}>
       <div className={classes.container}>
         <h2 style={{ color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
           <strong>SURF COURSES</strong>
@@ -39,7 +43,7 @@ export default function SectionCurses({ ...rest }) {
                 <GridItem xs={12} sm={6} md={6}>
                   <CardHeader image plain>
                     <a>
-                      <img src={level1} alt='level1' />
+                      <img src={level1} alt="level1" />
                     </a>
                     <div
                       className={classes.coloredShadow}
@@ -65,16 +69,29 @@ export default function SectionCurses({ ...rest }) {
                     take place on a safe sand-bottom beach break perfect for your level.
                     <br />
                     <br />
-                    <b>Goals:</b>
-                    <ul>
-                      {' '}
-                      <li>Situational awareness of the beach where we surf (rocks, currents, reference point…) </li>
-                      <li>Understanding the anatomy of a surfboard</li>
-                      <li>How to control your own surfboard</li>
-                      <li>Basic paddle technique in whitewash</li>
-                      <li>Pop up and ride the white water with correct surf position</li>
-                      <li>Finish the lesson with a group feedback session</li>
-                    </ul>
+                    <ShowMoreText
+                      /* Default options */
+                      lines={3}
+                      more="Show more"
+                      less={!isWidthUp('sm', rest.width) ? 'Show less' : ''}
+                      className="content-css"
+                      anchorClass="my-anchor-css-class"
+                      //onClick={handleShowMore}
+                      expanded={isWidthUp('sm', rest.width)}
+                      width={5}
+                      truncatedEndingComponent={'... '}
+                    >
+                      <b>Goals:</b>
+                      <ul>
+                        {' '}
+                        <li>Situational awareness of the beach where we surf (rocks, currents, reference point…) </li>
+                        <li>Understanding the anatomy of a surfboard</li>
+                        <li>How to control your own surfboard</li>
+                        <li>Basic paddle technique in whitewash</li>
+                        <li>Pop up and ride the white water with correct surf position</li>
+                        <li>Finish the lesson with a group feedback session</li>
+                      </ul>
+                    </ShowMoreText>
                   </p>
                 </GridItem>
               </GridContainer>
@@ -84,7 +101,7 @@ export default function SectionCurses({ ...rest }) {
                 <GridItem xs={12} sm={6} md={6}>
                   <CardHeader image plain>
                     <a>
-                      <img src={level2} alt='level2' />
+                      <img src={level2} alt="level2" />
                     </a>
                     <div
                       className={classes.coloredShadow}
@@ -111,14 +128,27 @@ export default function SectionCurses({ ...rest }) {
                     this level is to
                     <br />
                     <br />
-                    <b>Goals:</b>
-                    <ul>
-                      <li>Paddle out with safe technique (turtle rolls, chest up…).</li>
-                      <li>Choose the correct spot at the line up.</li>
-                      <li>Take off with a good positioning and ride left or right.</li>
-                      <li>Keep safe distance from other surfers and respect.</li>
-                      <li>Finish the session with individual feedback.</li>
-                    </ul>
+                    <ShowMoreText
+                      /* Default options */
+                      lines={3}
+                      more="Show more"
+                      less={!isWidthUp('sm', rest.width) ? 'Show less' : ''}
+                      className="content-css"
+                      anchorClass="my-anchor-css-class"
+                      //onClick={handleShowMore}
+                      expanded={isWidthUp('sm', rest.width)}
+                      width={5}
+                      truncatedEndingComponent={'... '}
+                    >
+                      <b>Goals:</b>
+                      <ul>
+                        <li>Paddle out with safe technique (turtle rolls, chest up…).</li>
+                        <li>Choose the correct spot at the line up.</li>
+                        <li>Take off with a good positioning and ride left or right.</li>
+                        <li>Keep safe distance from other surfers and respect.</li>
+                        <li>Finish the session with individual feedback.</li>
+                      </ul>
+                    </ShowMoreText>
                   </p>
                 </GridItem>
               </GridContainer>
@@ -128,7 +158,7 @@ export default function SectionCurses({ ...rest }) {
                 <GridItem xs={12} sm={6} md={6}>
                   <CardHeader image plain>
                     <a>
-                      <img src={level3} alt='level3' />
+                      <img src={level3} alt="level3" />
                     </a>
                     <div
                       className={classes.coloredShadow}
@@ -156,15 +186,28 @@ export default function SectionCurses({ ...rest }) {
                     make you feel safe and inspired while surfing some of the best spots in Costa Rica.
                     <br />
                     <br />
-                    <b>Goals:</b>
-                    <ul>
-                      {' '}
-                      <li>Basic maneuvers: catbacks, carving, floaters, off the lip… and much more!.</li>
-                      <li>Take off from main peaks and improve your timing.</li>
-                      <li>Learn to get speed by pumping in the right area of the wave.</li>
-                      <li>Review your errors through video recording feedback of your instructor.</li>
-                      <li>No dropping in on people.Keep safe distance from other surfers and respect.</li>
-                    </ul>
+                    <ShowMoreText
+                      /* Default options */
+                      lines={3}
+                      more="Show more"
+                      less={!isWidthUp('sm', rest.width) ? 'Show less' : ''}
+                      className="content-css"
+                      anchorClass="my-anchor-css-class"
+                      //onClick={handleShowMore}
+                      expanded={isWidthUp('sm', rest.width)}
+                      width={20}
+                      truncatedEndingComponent={'... '}
+                    >
+                      <b>Goals:</b>
+                      <ul>
+                        {' '}
+                        <li>Basic maneuvers: catbacks, carving, floaters, off the lip… and much more!.</li>
+                        <li>Take off from main peaks and improve your timing.</li>
+                        <li>Learn to get speed by pumping in the right area of the wave.</li>
+                        <li>Review your errors through video recording feedback of your instructor.</li>
+                        <li>No dropping in on people.Keep safe distance from other surfers and respect.</li>
+                      </ul>
+                    </ShowMoreText>
                   </p>
                 </GridItem>
               </GridContainer>
@@ -175,3 +218,5 @@ export default function SectionCurses({ ...rest }) {
     </div>
   )
 }
+
+export default withWidth()(SectionCurses)

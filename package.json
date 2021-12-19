@@ -19,6 +19,7 @@
     "react-image-gallery": "1.0.9",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
+    "react-show-more-text": "^1.5.2",
     "react-slick": "0.28.1",
     "react-tagsinput": "3.19.0"
   },

@@ -12,8 +12,6 @@ import Header from 'components/Header/Header.js'
 import HeaderLinks from 'components/Header/HeaderLinks.js'
 import Parallax from 'components/Parallax/Parallax.js'
 import Footer from 'components/Footer/Footer.js'
-import Button from 'components/CustomButtons/Button.js'
-import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
 
 // sections for this page
 import SectionIntroduction from './Sections/SectionIntroduction'
@@ -21,8 +19,7 @@ import SectionLocation from './Sections/SectionLocation'
 import SectioncCurses from './Sections/SectionCurses'
 import SectionDescription from 'views/PresentationPage/Sections/SectionDescription.js'
 import SectionsSpots from './Sections/SectionsSpots'
-import Logo from 'assets/img/logo.png'
-import LogoFooter from 'assets/img/logoFooter.png'
+import LogoFooter from 'assets/img/staytrue.png'
 import presentationStyle from 'assets/jss/material-kit-pro-react/views/presentationStyle.js'
 import SectionTeams from './Sections/SectionTeams'
 import SectionPackages from './Sections/SectionPackages'
@@ -114,7 +111,7 @@ export default function PresentationPage(props) {
 
   const cardStyle = {
     position: 'absolute',
-    top: '10%',
+    top: '15%',
     left: '38%',
   }
 
@@ -127,13 +124,13 @@ export default function PresentationPage(props) {
         color="transparent"
         changeColorOnScroll={{
           height: 500,
-          color: 'dark',
+          color: 'white',
         }}
       />
-      <div style={cardStyle}>
+      {/* <div style={cardStyle}>
         <img style={imageStyle} src={Logo} />
-      </div>
-      <Parallax image={require('assets/img/_DSC1455.jpg').default} className={classes.parallax}></Parallax>
+      </div> */}
+      <Parallax image={require('assets/img/vshort2.mp4').default} className={classes.parallax} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionDescription id="home" />
         <SectionIntroduction id="introduction" />
@@ -185,21 +182,21 @@ export default function PresentationPage(props) {
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Curses</span>
+              <span className="cd-label">Courses</span>
             </a>
           </li>
           <li>
             <a
-              href="#footers"
-              data-number="4"
+              href="#cards"
+              data-number="7"
               className=""
               onClick={e => {
                 e.preventDefault()
-                smoothScroll('location')
+                smoothScroll('packages')
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Locations</span>
+              <span className="cd-label">Packages</span>
             </a>
           </li>
           <li>
@@ -232,18 +229,19 @@ export default function PresentationPage(props) {
           </li>
           <li>
             <a
-              href="#cards"
-              data-number="7"
+              href="#footers"
+              data-number="4"
               className=""
               onClick={e => {
                 e.preventDefault()
-                smoothScroll('packages')
+                smoothScroll('location')
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Packages</span>
+              <span className="cd-label">Locations</span>
             </a>
           </li>
+
           <li>
             <a
               href="#morphingCards"
@@ -261,12 +259,13 @@ export default function PresentationPage(props) {
         </ul>
       </nav>
       <Footer
+        id="contactus"
         theme="white"
         content={
           <>
             <div>
               <div className={classes.root}>
-                <img width="100px" heigth="100px" style={imageStyleFooter} src={LogoFooter} />
+                <img width="150px" heigth="150px" style={imageStyleFooter} src={LogoFooter} />
               </div>
             </div>
             <div className={classes.pullCenter}>
@@ -302,9 +301,19 @@ export default function PresentationPage(props) {
                     <i class="fab fa-whatsapp" /> +34 609559527{' '}
                   </ListItemIcon>
                 </ListItem>
+                <ListItem
+                  href="http://instagram.com/_u/staytrue.surf/"
+                  target="_blank"
+                  component="a"
+                  className={classes.inlineBlock}
+                >
+                  <ListItemIcon className={classes.block}>
+                    <i className="fab fa-instagram" /> - @StayTrue.surf
+                  </ListItemIcon>
+                </ListItem>
               </List>
             </div>
-            <div className={classes.rightLinks}>
+            {/* <div className={classes.rightLinks}>
               <ul>
                 <li>
                   <Button
@@ -318,7 +327,7 @@ export default function PresentationPage(props) {
                   </Button>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </>
         }
       />

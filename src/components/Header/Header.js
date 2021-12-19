@@ -1,4 +1,5 @@
 import React from 'react'
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
 import { Link } from 'react-router-dom'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
@@ -9,7 +10,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
-import Button from '@material-ui/core/Button'
 import Hidden from '@material-ui/core/Hidden'
 import Drawer from '@material-ui/core/Drawer'
 // @material-ui/icons
@@ -17,12 +17,13 @@ import Menu from '@material-ui/icons/Menu'
 import Close from '@material-ui/icons/Close'
 // core components
 import styles from 'assets/jss/material-kit-pro-react/components/headerStyle.js'
-import Logo from '../../assets/img/logo.png'
+import Logo from '../../assets/img/staytrue.png'
 
 const useStyles = makeStyles(styles)
 
-export default function Header(props) {
+function Header(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false)
+  const [change, setChange] = React.useState(false)
   const classes = useStyles()
   React.useEffect(() => {
     if (props.changeColorOnScroll) {
@@ -37,30 +38,24 @@ export default function Header(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
   }
+
+  const isMobile = isWidthUp('sm', props.width)
   const headerColorChange = () => {
     const { color, changeColorOnScroll } = props
 
     const windowsScrollTop = window.pageYOffset
     if (windowsScrollTop > changeColorOnScroll.height) {
+      setChange(true)
       document.body.getElementsByTagName('header')[0].classList.remove(classes[color])
       document.body.getElementsByTagName('header')[0].classList.add(classes[changeColorOnScroll.color])
     } else {
       document.body.getElementsByTagName('header')[0].classList.add(classes[color])
       document.body.getElementsByTagName('header')[0].classList.remove(classes[changeColorOnScroll.color])
+      setChange(false)
     }
   }
 
-  const imageStyle = {
-    verticalAlign: 'middle',
-    width: '5%',
-    height: '5%',
-  }
-
-  const cardStyle = {
-    position: 'absolute',
-  }
-
-  const { color, links, brand, fixed, absolute } = props
+  const { color, links, fixed, absolute } = props
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
@@ -70,21 +65,26 @@ export default function Header(props) {
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
-        {/* <div style={cardStyle}>
-          <img style={imageStyle} src={Logo} />
-        </div> */}
-        <Hidden smDown implementation="css" className={classes.hidden}>
+        <div>
+          <img
+            width={!change ? '10%' : isMobile ? '3%' : '10%'}
+            src={Logo}
+            alt='logo'
+            style={{ top: 0, display: 'flex', position: 'absolute' }}
+          />
+        </div>
+        <Hidden smDown implementation='css' className={classes.hidden}>
           <div className={classes.collapse}>{links}</div>
         </Hidden>
         <Hidden mdUp>
-          <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerToggle}>
+          <IconButton color='inherit' aria-label='open drawer' onClick={handleDrawerToggle}>
             <Menu />
           </IconButton>
         </Hidden>
       </Toolbar>
-      <Hidden mdUp implementation="js">
+      <Hidden mdUp implementation='js'>
         <Drawer
-          variant="temporary"
+          variant='temporary'
           anchor={'right'}
           open={mobileOpen}
           classes={{
@@ -93,8 +93,8 @@ export default function Header(props) {
           onClose={handleDrawerToggle}
         >
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
+            color='inherit'
+            aria-label='open drawer'
             onClick={handleDrawerToggle}
             className={classes.closeButtonDrawer}
           >
@@ -106,6 +106,8 @@ export default function Header(props) {
     </AppBar>
   )
 }
+
+export default withWidth()(Header)
 
 Header.defaultProp = {
   color: 'dark',
