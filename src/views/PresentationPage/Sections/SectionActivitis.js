@@ -6,8 +6,6 @@ import GridContainer from 'components/Grid/GridContainer.js'
 import GridItem from 'components/Grid/GridItem.js'
 import Card from 'components/Card/Card.js'
 import Carousel from 'react-slick'
-import ImageList from '@material-ui/core/ImageList'
-import ImageListItem from '@material-ui/core/ImageListItem'
 import ImageListItemBar from '@material-ui/core/ImageListItemBar'
 import carouselStyle from 'assets/jss/material-kit-pro-react/views/componentsSections/carouselStyle.js'
 import Atv from 'assets/img/atv.jpg'
@@ -42,7 +40,7 @@ export default function SectionActivitis({ ...rest }) {
   const classes = useStyles()
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 2000,
     //fade: true,
     slidesToShow: 3,
     //focusOnSelect: true,
@@ -80,7 +78,10 @@ export default function SectionActivitis({ ...rest }) {
       <div className={classes.container}>
         <GridContainer>
           <GridItem md={12} sm={12} xs={12}>
-            <h2 style={{ color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
+            <h2
+              style={{ fontSize: '1.5rem', color: 'rgb(94 110 126)' }}
+              className={classes.sectionDark}
+            >
               <strong>ACTIVITIES</strong>
             </h2>
           </GridItem>
@@ -90,29 +91,39 @@ export default function SectionActivitis({ ...rest }) {
                 <Card style={cardStyle}>
                   <img src={Atv} alt="First slide" style={imageStyle} />
                   <ImageListItemBar
-                    title="ATV"
-                    subtitle={
-                      <span>
-                        {' '}
-                        All Terrain Vehicles (ATVs), also called “quads,” are the preferred method of transport and the
-                        best for exploring the area. We recommended renting one during your visit.
-                      </span>
-                    }
+                    style={{
+                      height: '100%',
+                      justifyItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex',
+                    }}
                   />
-                  {/* <div className="slick-caption">
-                    <h4>ATV</h4>
+                  <div className="slick-caption">
+                    <h4>
+                      <strong>ATV</strong>
+                    </h4>
                     <p className={classes.sectionDark}>
                       All Terrain Vehicles (ATVs), also called “quads,” are the preferred method of transport and the
                       best for exploring the area. We recommended renting one during your visit.
                     </p>
-                  </div> */}
+                  </div>
                 </Card>
               </GridItem>
               <GridItem xs={12} md={12} sm={12}>
                 <Card style={cardStyle}>
                   <img src={Horse} alt="First slide" style={imageStyle} />
+                  <ImageListItemBar
+                    style={{
+                      height: '100%',
+                      justifyItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex',
+                    }}
+                  />
                   <div className="slick-caption">
-                    <h4>HORSEBACK RIDING</h4>
+                    <h4>
+                      <strong>HORSEBACK RIDING</strong>
+                    </h4>
                     <p className={classes.sectionDark}>
                       An amazing experience.. Enjoy a natural landscape of rivers, mountains and beaches, while you ride
                       accompanied by local cowboys.
@@ -123,8 +134,18 @@ export default function SectionActivitis({ ...rest }) {
               <GridItem xs={12} md={12} sm={12}>
                 <Card style={cardStyle}>
                   <img src={Bio} alt="First slide" style={imageStyle} />
+                  <ImageListItemBar
+                    style={{
+                      height: '100%',
+                      justifyItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex',
+                    }}
+                  />
                   <div className="slick-caption">
-                    <h4>BIOLUMINESCENT TOUR</h4>
+                    <h4>
+                      <strong>BIOLUMINESCENT TOUR</strong>
+                    </h4>
                     <p className={classes.sectionDark}>
                       Most spectacular night tour. On this tour you can see the plankton glow in the dark from your
                       first paddle stroke, it’s a really unique experience not to be missed.
@@ -135,8 +156,18 @@ export default function SectionActivitis({ ...rest }) {
               <GridItem xs={12} md={12} sm={12}>
                 <Card style={cardStyle}>
                   <img src={Fishing} alt="First slide" style={imageStyle} />
+                  <ImageListItemBar
+                    style={{
+                      height: '100%',
+                      justifyItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex',
+                    }}
+                  />
                   <div className="slick-caption">
-                    <h4>FISHING</h4>
+                    <h4>
+                      <strong>FISHING</strong>
+                    </h4>
                     <p className={classes.sectionDark}>
                       With our local captain You can do spearfishing, trolling, casting, or open water fishing in the
                       beautiful clear waters off the Nicoya Peninsula. Maybe you’ll come back with dinner!
@@ -147,8 +178,18 @@ export default function SectionActivitis({ ...rest }) {
               <GridItem xs={12} md={12} sm={12}>
                 <Card style={cardStyle}>
                   <img src={Yoga} alt="First slide" style={imageStyle} />
+                  <ImageListItemBar
+                    style={{
+                      height: '100%',
+                      justifyItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex',
+                    }}
+                  />
                   <div className="slick-caption">
-                    <h4>YOGA</h4>
+                    <h4>
+                      <strong>YOGA</strong>
+                    </h4>
                     <p className={classes.sectionDark}>
                       Yoga complements surfing perfectly as it builds strength, flexibility and balance. Practicing yoga
                       after surfing for stretching is one of our daily bases.
@@ -159,8 +200,18 @@ export default function SectionActivitis({ ...rest }) {
               <GridItem xs={12} md={12} sm={12}>
                 <Card style={cardStyle}>
                   <img style={imageStyle} src={Apnea} alt="First slide" className="slick-image" />
+                  <ImageListItemBar
+                    style={{
+                      height: '100%',
+                      justifyItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex',
+                    }}
+                  />
                   <div className="slick-caption">
-                    <h4>APNEA</h4>
+                    <h4>
+                      <strong>APNEA</strong>
+                    </h4>
                     <p className={classes.sectionDark}>
                       During this experience we will take you through an amazing journey into the world of a better
                       understanding of breathing as a life skill. The professional team will give you the tools to
@@ -172,8 +223,18 @@ export default function SectionActivitis({ ...rest }) {
               <GridItem xs={12} md={12} sm={12}>
                 <Card style={cardStyle}>
                   <img style={imageStyle} src={Cicio} alt="First slide" className="slick-image" />
+                  <ImageListItemBar
+                    style={{
+                      height: '100%',
+                      justifyItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex',
+                    }}
+                  />
                   <div className="slick-caption">
-                    <h4>SURF TRAINING</h4>
+                    <h4>
+                      <strong>SURF TRAINING</strong>
+                    </h4>
                     <p className={classes.sectionDark}>
                       Quality surf training will help you perform better in the water, catch more waves and enjoy a fun
                       surf session. Surf fitness is going to help keep you injury-free, too. Surfing is one of the most
@@ -185,8 +246,18 @@ export default function SectionActivitis({ ...rest }) {
               <GridItem xs={12} md={12} sm={12}>
                 <Card style={cardStyle}>
                   <img style={imageStyle} src={Montezuma} alt="First slide" className="slick-image" />
+                  <ImageListItemBar
+                    style={{
+                      height: '100%',
+                      justifyItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex',
+                    }}
+                  />
                   <div className="slick-caption">
-                    <h4>MONTEZUMA WATERFALL</h4>
+                    <h4>
+                      <strong>MONTEZUMA WATERFALL</strong>
+                    </h4>
                     <p className={classes.sectionDark}>
                       The Montezuma waterfall consists of three cascading falls along a river in the bohemian beach town
                       of Montezuma. Is one of the biggest attractions of the area where you can swim, refresh and jump
@@ -198,14 +269,22 @@ export default function SectionActivitis({ ...rest }) {
               <GridItem xs={12} md={12} sm={12}>
                 <Card style={cardStyle}>
                   <img style={imageStyle} src={Board} alt="First slide" className="slick-image" />
+                  <ImageListItemBar
+                    style={{
+                      height: '100%',
+                      justifyItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex',
+                    }}
+                  />
                   <div className="slick-caption">
-                    <h4>STAND-UP PADDLE BOARDING</h4>
+                    <h4>
+                      <strong>STAND-UP PADDLE BOARDING </strong>
+                    </h4>
                     <p className={classes.sectionDark}>
-                      <strong>
-                        The Montezuma waterfall consists of three cascading falls along a river in the bohemian beach
-                        town of Montezuma. Is one of the biggest attractions of the area where you can swim, refresh and
-                        jump into the water!
-                      </strong>
+                      The Montezuma waterfall consists of three cascading falls along a river in the bohemian beach town
+                      of Montezuma. Is one of the biggest attractions of the area where you can swim, refresh and jump
+                      into the water!
                     </p>
                   </div>
                 </Card>

@@ -2,6 +2,8 @@ import React from 'react'
 // core components
 import GridContainer from 'components/Grid/GridContainer.js'
 import GridItem from 'components/Grid/GridItem.js'
+import ImageListItemBar from '@material-ui/core/ImageListItemBar'
+
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 import cardsStyle from 'assets/jss/material-kit-pro-react/views/presentationSections/cardsStyle.js'
@@ -11,6 +13,7 @@ const cardStyle = {
   flex: '1 1 auto',
   position: 'relative',
   height: '700px',
+  background: 'round'
 }
 
 const useStyles = makeStyles(cardsStyle)
@@ -26,9 +29,17 @@ export default function SectionLocation({ ...rest }) {
             backgroundImage: `url(${require('assets/img/background.jpg').default})`,
           }}
         >
+          <ImageListItemBar
+            style={{
+              height: '100%',
+              justifyItems: 'center',
+              justifyContent: 'center',
+              display: 'flex',
+            }}
+          />
           <div className={classes.container}>
-            <GridContainer justify='center'>
-              <GridItem md={5} sm={6} className={classes.mlAuto}>
+            <GridContainer justify='left'>
+              <GridItem md={5} sm={6} >
                 <div
                   style={{
                     margin: '10px',

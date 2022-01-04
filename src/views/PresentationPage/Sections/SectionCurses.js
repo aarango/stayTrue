@@ -12,32 +12,44 @@ import blogsStyle from 'assets/jss/material-kit-pro-react/views/sectionsSections
 import ShowMoreText from 'react-show-more-text'
 
 import level1 from 'assets/img/activity1.jpeg'
-import level2 from 'assets/img/DSC_0650.jpg'
+import level2 from 'assets/img/level2.jpeg'
 import level3 from 'assets/img/_DSC1455.jpg'
 
 const useStyles = makeStyles(blogsStyle)
 
 function SectionCurses({ ...rest }) {
-
   const classes = useStyles()
   return (
     <div style={{ marginBottom: 0 }} className="cd-section" {...rest}>
       <div className={classes.container}>
-        <h2 style={{ color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
+        <h2 style={{ fontSize: '1.5rem', color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
           <strong>SURF COURSES</strong>
         </h2>
         <GridContainer>
           <GridItem xs={11} sm={12} md={12} className={classes.mlAuto + ' ' + classes.mrAuto}>
             <strong>Great waves, playful conditions and warm water under palm trees 365 days a year!</strong>
             <br />
-            <p className={classes.sectionDark}>
-              Surf courses for all levels are available from experienced local instructors, who are formally trained to
-              teach you how to surf and are qualified in the fields of surf rescue and first aid. They are motivated to
-              guide you safely with expert tips and surf rules to feel comfortable in the water! Preferring to focus on
-              quality not quantity, there is a maximum of 2 students per coach. Every day we patrol the coast to find
-              the best surf spots and conditions depending on your level. Sunny days, good waves and safe learning are
-              guaranteed…. How? breathing surf with us!
-            </p>
+            <ShowMoreText
+              /* Default options */
+              lines={3}
+              more="Show more"
+              less={!isWidthUp('sm', rest.width) ? 'Show less' : ''}
+              className="content-css"
+              anchorClass="my-anchor-css-class"
+              //onClick={handleShowMore}
+              expanded={isWidthUp('sm', rest.width)}
+              width={5}
+              truncatedEndingComponent={'... '}
+            >
+              <p className={classes.sectionDark}>
+                Surf courses for all levels are available from experienced local instructors, who are formally trained
+                to teach you how to surf and are qualified in the fields of surf rescue and first aid. They are
+                motivated to guide you safely with expert tips and surf rules to make you feel comfortable in the water!
+                Preferring to focus on quality not quantity, there is a maximum of 2 students per coach. Every day we
+                patrol the coast to find the best surf spots and conditions depending on your level. Sunny days, good
+                waves and safe learning are guaranteed…. How? breathing surf with us!
+              </p>
+            </ShowMoreText>
             <Card plain blog className={classes.card}>
               <GridContainer>
                 <GridItem xs={12} sm={6} md={6}>
@@ -124,8 +136,7 @@ function SectionCurses({ ...rest }) {
                   <strong>LEVEL 2: INTERMEDIATE SURFER</strong>
                   <p className={classes.sectionDark}>
                     If you've already surfed, you have control of your surfboard and consider yourself capable of
-                    paddling to the lineup, welcome to level 2! We search for smooth and easy green waves.Our goal for
-                    this level is to
+                    paddling to the lineup, welcome to level 2! We search for smooth and easy green waves.
                     <br />
                     <br />
                     <ShowMoreText
@@ -144,7 +155,7 @@ function SectionCurses({ ...rest }) {
                       <ul>
                         <li>Paddle out with safe technique (turtle rolls, chest up…).</li>
                         <li>Choose the correct spot at the line up.</li>
-                        <li>Take off with a good positioning and ride left or right.</li>
+                        <li>Take off with a good positioning on the board.</li>
                         <li>Keep safe distance from other surfers and respect.</li>
                         <li>Finish the session with individual feedback.</li>
                       </ul>
@@ -201,11 +212,11 @@ function SectionCurses({ ...rest }) {
                       <b>Goals:</b>
                       <ul>
                         {' '}
-                        <li>Basic maneuvers: catbacks, carving, floaters, off the lip… and much more!.</li>
+                        <li>Basic maneuvers: cutbacks, carving, floaters, off the lip… and much more!.</li>
                         <li>Take off from main peaks and improve your timing.</li>
                         <li>Learn to get speed by pumping in the right area of the wave.</li>
-                        <li>Review your errors through video recording feedback of your instructor.</li>
-                        <li>No dropping in on people.Keep safe distance from other surfers and respect.</li>
+                        <li>Review your progression through video analysis .</li>
+                        <li>No dropping in on people. Keep safe distance from other surfers and respect.</li>
                       </ul>
                     </ShowMoreText>
                   </p>

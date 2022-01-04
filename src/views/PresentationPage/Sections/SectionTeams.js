@@ -23,20 +23,20 @@ const useStyles = makeStyles(teamsStyle)
 export default function SectionTeams({ ...rest }) {
   const classes = useStyles()
   return (
-    <div className='cd-section' {...rest}>
+    <div className="cd-section" {...rest}>
       <div className={classes.container} style={{ alignContent: 'center' }}>
         <GridContainer>
           <GridItem xs={11} sm={11} md={11} className={classes.mlAuto + ' ' + classes.mrAuto}>
-            <h2 style={{ color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
+            <h2 style={{ fontSize: '1.5rem', color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
               <strong>OUR TEAM</strong>
             </h2>
           </GridItem>
         </GridContainer>
-        <GridContainer justifyContent='center'>
+        <GridContainer justifyContent="center">
           <GridItem xs={12} sm={6} md={6}>
             <Card plain profile>
               <CardHeader image plain style={{ paddingLeft: '30px', paddingRight: '30px' }}>
-                <img src={cardProfile2Square} alt='chicho' />
+                <img src={cardProfile2Square} alt="chicho" />
               </CardHeader>
               <CardBody plain>
                 <h4 className={classes.cardTitle}>CICCIO</h4>
@@ -51,8 +51,8 @@ export default function SectionTeams({ ...rest }) {
                 </p>
               </CardBody>
               <CardFooter profile plain className={classes.justifyContent}>
-                <Button justIcon round color='instagram' href='http://instagram.com/_u/surfciccio/'>
-                  <i className='fab fa-instagram' />
+                <Button justIcon round color="instagram" href="http://instagram.com/_u/surfciccio/">
+                  <i className="fab fa-instagram" />
                 </Button>
               </CardFooter>
             </Card>
@@ -60,7 +60,7 @@ export default function SectionTeams({ ...rest }) {
           <GridItem xs={12} sm={6} md={6}>
             <Card plain profile>
               <CardHeader image plain style={{ paddingLeft: '30px', paddingRight: '30px' }}>
-                <img src={cardProfile4Square} alt='Lore' />
+                <img src={cardProfile4Square} alt="Lore" />
               </CardHeader>
               <CardBody plain>
                 <h4 className={classes.cardTitle}>LEO</h4>
@@ -77,8 +77,8 @@ export default function SectionTeams({ ...rest }) {
                 </p>
               </CardBody>
               <CardFooter profile plain className={classes.justifyContent}>
-                <Button justIcon round color='instagram' href='http://instagram.com/_u/leooruiz/'>
-                  <i className='fab fa-instagram' />
+                <Button justIcon round color="instagram" href="http://instagram.com/_u/leooruiz/">
+                  <i className="fab fa-instagram" />
                 </Button>
               </CardFooter>
             </Card>

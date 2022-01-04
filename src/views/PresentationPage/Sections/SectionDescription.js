@@ -22,8 +22,8 @@ export default function SectionDescription({ ...rest }) {
                 className={classes.sectionDark}
               >
                 <strong>
-                  We aim to share an experience beyond just learning to surf, we will guide you to live the dream of
-                  staying true to a surfing lifestyle.
+                  We aim to share an experience beyond learning to surf. We will guide you through the process of
+                  becoming a true surfer.
                 </strong>
               </h2>
             </GridItem>

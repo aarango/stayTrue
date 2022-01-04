@@ -21,7 +21,7 @@ export default function SectionPackages({ ...rest }) {
       <div className={classes.container}>
         <GridContainer>
           <GridItem md={12} sm={12} xs={12}>
-            <h2 style={{ color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
+            <h2 style={{ fontSize: '1.5rem', color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
               <strong>SURF PACKAGES</strong>
             </h2>
           </GridItem>
@@ -33,7 +33,7 @@ export default function SectionPackages({ ...rest }) {
                   <GiWaveSurfer className={classes.iconWhite} size={60} />
                 </div>
                 <h3 className={`${classes.cardTitleWhite} ${classes.marginTop30}`}>
-                  <strong>225 USD</strong>
+                  <strong>240 USD</strong>
                 </h3>
                 <strong className={classes.cardDescriptionWhite}>
                   {' '}
@@ -65,7 +65,7 @@ export default function SectionPackages({ ...rest }) {
                   style={{ justifyContent: 'center', alignItems: 'center' }}
                   className={`${classes.cardTitleWhite} ${classes.marginTop30}`}
                 >
-                  <strong>450 USD</strong>
+                  <strong>480 USD</strong>
                 </h3>
                 <strong className={classes.cardDescristrongtionWhite}>
                   5 SURF lessons with equipment
@@ -94,7 +94,7 @@ export default function SectionPackages({ ...rest }) {
                 </div>
                 <h3 className={`${classes.cardTitleWhite} ${classes.marginTop30}`}>
                   {' '}
-                  <strong>400 USD</strong>
+                  <strong>450 USD</strong>
                 </h3>
                 <strong className={classes.cardDescriptionWhite}>
                   3 SURF lessons with equipment <br /> + APNEA FOR SURFERS + 1 SURF-TRAINING
@@ -124,7 +124,7 @@ export default function SectionPackages({ ...rest }) {
                   style={{ justifyContent: 'center', alignItems: 'center' }}
                   className={`${classes.cardTitleWhite} ${classes.marginTop30}`}
                 >
-                  <strong>630 USD</strong>
+                  <strong>660 USD</strong>
                 </h3>
                 <strong className={classes.cardDescristrongtionWhite}>
                   5 SURF lessons with equipment
@@ -136,7 +136,7 @@ export default function SectionPackages({ ...rest }) {
                   round
                   color='linkedin'
                   component='a'
-                  href='mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 2!'
+                  href='mailto:staytrue.surf@gmail.com?subject=Hello, Hi! I am interested in Package 4!'
                 >
                   Choose package
                 </Button>
@@ -152,7 +152,7 @@ export default function SectionPackages({ ...rest }) {
                 </div>
                 <h3 className={`${classes.cardTitleWhite} ${classes.marginTop30}`}>
                   {' '}
-                  <strong>190 USD</strong>
+                  <strong>200 USD</strong>
                 </h3>
                 <strong className={classes.cardDescriptionWhite}>
                   CABUYA : 1 SURF / STAND UP lesson with equipment + ATV rental + CACAO TOUR

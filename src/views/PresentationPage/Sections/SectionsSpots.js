@@ -9,11 +9,11 @@ import CardBody from 'components/Card/CardBody.js'
 import { makeStyles } from '@material-ui/core/styles'
 import Carousel from 'react-slick'
 
-import playaHermosa from 'assets/img/playaHermosa.jpg'
-import santateresa2 from 'assets/img/santateresa2.jpg'
-import playadelcarmen from 'assets/img/DSC_0536.jpg'
+import playaHermosa from 'assets/img/DSC_0650.jpg'
+import santateresa2 from 'assets/img/DSC_0622.jpg'
+import lajas from 'assets/img/lajas.jpeg'
+import malpais from 'assets/img/malpais.jpeg'
 import playac from 'assets/img/playadelcarmen.jpg'
-import lajas from 'assets/img/DSC_0622.jpg'
 import carouselStyle from 'assets/jss/material-kit-pro-react/views/componentsSections/carouselStyle.js'
 
 const useStyles = makeStyles(carouselStyle)
@@ -22,7 +22,7 @@ export default function SectionsSpots({ ...rest }) {
   const classes = useStyles()
   const settings = {
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -55,7 +55,7 @@ export default function SectionsSpots({ ...rest }) {
   return (
     <div className={classes.section} id="carousel" className="cd-section" {...rest}>
       <div className={classes.container}>
-        <h2 className={classes.sectionDark}>
+        <h2 style={{ fontSize: '1.5rem', color: 'rgb(94 110 126)' }} className={classes.sectionDark}>
           <strong>SURF SPOTS</strong>
         </h2>
         <GridContainer>
@@ -77,7 +77,8 @@ export default function SectionsSpots({ ...rest }) {
                       <strong>SANTA TERESA</strong>
                     </h4>
                     <p className={classes.cardDescription}>
-                      A fun, hollow beach break consistently waves in good shape, and is a bit hollower at low tide.
+                      A fun, hollow beach break with consistent waves. Better suited for intermediate and advanced
+                      surfers.
                       <br />
                       <br />
                     </p>
@@ -130,12 +131,9 @@ export default function SectionsSpots({ ...rest }) {
                 <Card blog>
                   <CardHeader image>
                     <a href="#MALPAIS">
-                      <img src={playadelcarmen} alt="MALPAIS" />
+                      <img src={malpais} alt="MALPAIS" />
                     </a>
-                    <div
-                      className={classes.coloredShadow}
-                      style={{ backgroundImage: `url(${playadelcarmen})`, opacity: 1 }}
-                    />
+                    <div className={classes.coloredShadow} style={{ backgroundImage: `url(${malpais})`, opacity: 1 }} />
                   </CardHeader>
                   <CardBody>
                     <h4 className={classes.cardTitle}>

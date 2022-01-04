@@ -1,5 +1,5 @@
 import { container, title, main, whiteColor, grayColor, mainRaised, hexToRgb } from 'assets/jss/stayTruePack'
-import footerStyle from 'assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js';
+import footerStyle from 'assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js'
 
 const presentationStyle = {
   ...footerStyle,
@@ -9,7 +9,7 @@ const presentationStyle = {
   },
   mainRaised,
   parallax: {
-    height: '90vh',
+    height: '200%', // raised 90hz
     overflow: 'hidden',
   },
   container: {
@@ -44,6 +44,6 @@ const presentationStyle = {
     lineHeight: '22px',
     boxShadow: '0 5px 5px -2px rgba(' + hexToRgb(grayColor[25]) + ',.4)',
   },
-};
+}
 
-export default presentationStyle;
+export default presentationStyle

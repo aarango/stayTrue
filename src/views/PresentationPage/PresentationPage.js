@@ -35,71 +35,70 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const updateView = () => {
-  var contentSections = document.getElementsByClassName('cd-section')
-  var navigationItems = document.getElementById('cd-vertical-nav')?.getElementsByTagName('a')
+// const updateView = () => {
+//   var contentSections = document.getElementsByClassName('cd-section')
+//   // var navigationItems = document.getElementById('cd-vertical-nav')?.getElementsByTagName('a')
 
-  for (let i = 0; i < contentSections.length; i++) {
-    var activeSection = parseInt(navigationItems[i].getAttribute('data-number'), 10) - 1
-    if (
-      contentSections[i].offsetTop - window.innerHeight / 2 < window.pageYOffset &&
-      contentSections[i].offsetTop + contentSections[i].scrollHeight - window.innerHeight / 2 > window.pageYOffset
-    ) {
-      navigationItems[activeSection].classList.add('is-selected')
-    } else {
-      navigationItems[activeSection].classList.remove('is-selected')
-    }
-  }
-}
+//   // for (let i = 0; i < contentSections.length; i++) {
+//   //   var activeSection = parseInt(navigationItems[i].getAttribute('data-number'), 10) - 1
+//   //   if (
+//   //     contentSections[i].offsetTop - window.innerHeight / 2 < window.pageYOffset &&
+//   //     contentSections[i].offsetTop + contentSections[i].scrollHeight - window.innerHeight / 2 > window.pageYOffset
+//   //   ) {
+//   //     navigationItems[activeSection].classList.add('is-selected')
+//   //   } else {
+//   //     navigationItems[activeSection].classList.remove('is-selected')
+//   //   }
+//   // }
+// }
 
 export default function PresentationPage(props) {
-  React.useEffect(() => {
-    var href = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
-    if (window.location.href.lastIndexOf('#') > 0) {
-      document.getElementById(href)?.scrollIntoView()
-    }
-    window.addEventListener('scroll', updateView)
-    updateView()
-    return function cleanup() {
-      window.removeEventListener('scroll', updateView)
-    }
-  })
+  // React.useEffect(() => {
+  //   var href = window.location.href.substring(window.location.href.lastIndexOf('#') + 1)
+  //   if (window.location.href.lastIndexOf('#') > 0) {
+  //     document.getElementById(href)?.scrollIntoView()
+  //   }
+  //   window.addEventListener('scroll', updateView)
+  //   updateView()
+  //   return function cleanup() {
+  //     window.removeEventListener('scroll', updateView)
+  //   }
+  // })
 
-  const easeInOutQuad = (t, b, c, d) => {
-    t /= d / 2
-    if (t < 1) return (c / 2) * t * t + b
-    t--
-    return (-c / 2) * (t * (t - 2) - 1) + b
-  }
-  const smoothScroll = target => {
-    var targetScroll = document.getElementById(target)
-    scrollGo(document.documentElement, targetScroll.offsetTop, 1250)
-  }
-  const scrollGo = (element, to, duration) => {
-    console.log('start', element.scrollTop)
-    var start = element.scrollTop,
-      change = to - start,
-      currentTime = 0,
-      increment = 20
+  // const easeInOutQuad = (t, b, c, d) => {
+  //   t /= d / 2
+  //   if (t < 1) return (c / 2) * t * t + b
+  //   t--
+  //   return (-c / 2) * (t * (t - 2) - 1) + b
+  // }
+  // const smoothScroll = target => {
+  //   var targetScroll = document.getElementById(target)
+  //   scrollGo(document.documentElement, targetScroll.offsetTop, 1250)
+  // }
+  // const scrollGo = (element, to, duration) => {
+  //   var start = element.scrollTop,
+  //     change = to - start,
+  //     currentTime = 0,
+  //     increment = 20
 
-    var animateScroll = function () {
-      currentTime += increment
-      var val = easeInOutQuad(currentTime, start, change, duration)
-      element.scrollTop = val
-      if (currentTime < duration) {
-        setTimeout(animateScroll, increment)
-      }
-    }
-    animateScroll()
-  }
+  //   var animateScroll = function () {
+  //     currentTime += increment
+  //     var val = easeInOutQuad(currentTime, start, change, duration)
+  //     element.scrollTop = val
+  //     if (currentTime < duration) {
+  //       setTimeout(animateScroll, increment)
+  //     }
+  //   }
+  //   animateScroll()
+  // }
 
-  const imageStyle = {
-    position: 'relative',
-    verticalAlign: 'middle',
-    width: '40%',
-    height: '100%',
-    zIndex: '100',
-  }
+  // const imageStyle = {
+  //   position: 'relative',
+  //   verticalAlign: 'middle',
+  //   width: '40%',
+  //   height: '100%',
+  //   zIndex: '100',
+  // }
 
   const imageStyleFooter = {
     position: 'relative',
@@ -107,12 +106,6 @@ export default function PresentationPage(props) {
     //width: '30%',
     height: '100%',
     //zIndex: '100',
-  }
-
-  const cardStyle = {
-    position: 'absolute',
-    top: '15%',
-    left: '38%',
   }
 
   const classes = useStyles()
@@ -130,7 +123,10 @@ export default function PresentationPage(props) {
       {/* <div style={cardStyle}>
         <img style={imageStyle} src={Logo} />
       </div> */}
-      <Parallax image={require('assets/img/vshort2.mp4').default} className={classes.parallax} />
+      {/* <audio loop id="musicplayer" autoplay>
+        <source src={require('assets/img/audiomp3.mp3').default} />
+      </audio> */}
+      <Parallax image={require('assets/img/vshort4.mp4').default} className={classes.parallax} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionDescription id="home" />
         <SectionIntroduction id="introduction" />
@@ -141,7 +137,7 @@ export default function PresentationPage(props) {
         <SectionLocation id="location" />
         <SectionTeams id="our" />
       </div>
-      <nav id="cd-vertical-nav">
+      {/* <nav id="cd-vertical-nav">
         <ul>
           <li>
             <a
@@ -257,7 +253,7 @@ export default function PresentationPage(props) {
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> */}
       <Footer
         id="contactus"
         theme="white"
@@ -282,16 +278,16 @@ export default function PresentationPage(props) {
                   </ListItemIcon>
                 </ListItem>
                 <ListItem
-                  href="https://api.whatsapp.com/send?phone=+506 85836298"
+                  href="https://api.whatsapp.com/send?phone=+506 88114924"
                   target="_blank"
                   component="a"
                   className={classes.inlineBlock}
                 >
                   <ListItemIcon className={classes.block}>
-                    <i sytle={{ fontSize: '15px' }} class="fab fa-whatsapp" /> +506 85836298{' '}
+                    <i sytle={{ fontSize: '15px' }} class="fab fa-whatsapp" /> +506 88114924{' '}
                   </ListItemIcon>
                 </ListItem>
-                <ListItem
+                {/* <ListItem
                   href="https://api.whatsapp.com/send?phone=+34 609559527"
                   target="_blank"
                   component="a"
@@ -300,7 +296,7 @@ export default function PresentationPage(props) {
                   <ListItemIcon className={classes.block}>
                     <i class="fab fa-whatsapp" /> +34 609559527{' '}
                   </ListItemIcon>
-                </ListItem>
+                </ListItem> */}
                 <ListItem
                   href="http://instagram.com/_u/staytrue.surf/"
                   target="_blank"

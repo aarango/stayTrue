@@ -349,13 +349,13 @@ const main = {
 
 const mainRaised = {
   '@media (max-width: 576px)': {
-    marginTop: '-30px',
+    marginTop: '-0px', // raised -30
   },
   '@media (max-width: 830px)': {
     marginLeft: '10px',
     marginRight: '10px',
   },
-  margin: '-60px 30px 0px',
+  margin: '-20px 30px 0px', // raised -60
   borderRadius: '6px',
   boxShadow:
     '0 16px 24px 2px rgba(' +
@@ -365,7 +365,7 @@ const mainRaised = {
     ', 0.12), 0 8px 10px -5px rgba(' +
     hexToRgb(blackColor) +
     ', 0.2)',
-};
+}
 
 const section = {
   backgroundPosition: '50%',
