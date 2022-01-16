@@ -215,8 +215,7 @@ function SectionCurses({ ...rest }) {
                         <li>Basic maneuvers: cutbacks, carving, floaters, off the lip… and much more!.</li>
                         <li>Take off from main peaks and improve your timing.</li>
                         <li>Learn to get speed by pumping in the right area of the wave.</li>
-                        <li>Review your progression through video analysis .</li>
-                        <li>No dropping in on people. Keep safe distance from other surfers and respect.</li>
+                        <li>Review your progression through video analysis.</li>
                       </ul>
                     </ShowMoreText>
                   </p>
